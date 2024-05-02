@@ -523,6 +523,7 @@
             ><span class="logo-footer">STUDIO</span></a
           >
           <p class="footer-sm">Social media</p>
+          <p class="footer-subscribe">Subscribe</p>
         </div>
         <div class="footer-bottom">
           <p class="footer-paragraph">
@@ -583,6 +584,25 @@
               </a>
             </li>
           </ul>
+          <form class="email-form" name="subscription">
+            <input
+              class="footer-form-input"
+              type="email"
+              name="user_email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-btn">
+              Subscribe
+              <span>
+                <img
+                  src="./images/icons/icon send.svg"
+                  alt="Subscribe Icon"
+                  width="24"
+                  height="20"
+                />
+              </span>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -595,8 +615,108 @@
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="contact-form" action="#">
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_name">Name</label>
+            <div class="review-form-field">
+              <input
+                class="review-form-input"
+                type="text"
+                name="user_name"
+                id="user_name"
+                placeholder="&nbsp;"
+                minlength="3"
+                required
+              />
+              <svg class="review-form-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_email">Email</label>
+            <div class="review-form-field">
+              <input
+                class="review-form-input"
+                type="email"
+                name="user_email"
+                id="user_email"
+                required
+                pattern="[a-zA-Z\S]+@[a-zA-Z\S]+\.[a-z]{2,3}$"
+                title="Email must contain domen"
+              />
+              <svg class="review-form-icon" width="16" height="12">
+                <use href="./images/sprite.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_phone">
+              Phone number
+            </label>
+            <div class="review-form-field">
+              <input
+                class="review-form-input"
+                type="tel"
+                name="user_phone"
+                id="user_phone"
+                minlength="18"
+                maxlength="18"
+              />
+              <svg class="review-form-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-tel"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_msg">Comment</label>
+            <textarea
+              class="review-form-message"
+              name="user_msg"
+              id="user_msg"
+              rows="4"
+              placeholder="Text input"
+              minlength="10"
+              required
+            ></textarea>
+          </div>
+
+          <div class="review-form-agreement">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="user_agreement"
+              id="user_agreement"
+              value="false"
+            />
+
+            <label class="review-form-agreement-desc" for="user_agreement">
+              <span class="review-form-checkbox">
+                <svg class="review-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/sprite.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a
+                class="review-form-agreement-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </label>
+          </div>
+
+          <div class="review-form-button">
+            <button type="submit" class="btn submit-btn">Send</button>
+          </div>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
